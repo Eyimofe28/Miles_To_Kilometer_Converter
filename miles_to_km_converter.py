@@ -1,9 +1,13 @@
 from tkinter import *
+from tkinter import messagebox
 
 
 def calculate():
-    km = int(miles.get()) * 1.6
-    kilometer.config(text=str(round(km, 2)))
+    if miles.get().isdigit():
+        km = float(miles.get()) * 1.609
+        kilometer.config(text=str(round(km, 2)))
+    else:
+        messagebox.showerror(title="ERROR", message="Invalid Input. Please enter numbers only.\n(Spaces not allowed).")
 
 
 window = Tk()
@@ -27,7 +31,7 @@ text = Label(window, font=("Times New Roman", 12), fg="white", bg="black", text=
 text.grid(row=1, column=0)
 text.config(pady=15)
 
-kilometer = Label(window, font=("Times New Roman", 12), fg="light blue", bg="black", text="0")
+kilometer = Label(window, font=("Times New Roman", 12), fg="light blue", bg="black", text="0.0")
 kilometer.grid(row=1, column=1)
 kilometer.config(pady=15)
 
