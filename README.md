@@ -1,1 +1,1 @@
-# Miles_To_Kilometer_Converter
+This project is a simple graphical user interface (GUI) application for converting miles to kilometers using the tkinter library in Python. The application allows users to input a distance in miles, click a button to convert it to kilometers, and then displays the result. The conversion factor used is 1 mile = 1.6 kilometers. This code is modular and easy to understand, making it a great starting point for those interested in learning about GUI development in Python.
